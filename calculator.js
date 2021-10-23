@@ -2,11 +2,11 @@
 const express = require("express");
 
 const app = express();
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true})); // to parse data comming from html
 
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/index.html"); // __dirname is current dir name as a string
 });
 
 app.post("/", function(req, res) {
